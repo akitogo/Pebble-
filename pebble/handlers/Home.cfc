@@ -9,7 +9,7 @@ component{
 		context['websiteTitle']="My First Website";
 		context['content']="My First Website";
 		
-		writeOutput(pebble.render(context));
+		writeOutput(pebble.render('home',context));
 		abort;
 	}
 

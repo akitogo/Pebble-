@@ -10,9 +10,11 @@ component{
 	}
 
 	
-	string function render(struct context={}){
+	string function render(string templatename='',struct context={}){
 	    var writer = createObject("Java", "java.io.StringWriter").init();
-		var compiledTemplate=engine.getTemplate(expandPath("./modules/pebble/views/home.peb"));
+	    
+	    // template location must be improved, this is just a proof of concept
+		var compiledTemplate=engine.getTemplate(expandPath("./modules/pebble/views/"&arguments.templatename&".peb"));
 		
 		compiledTemplate.evaluate(writer, context);
 
