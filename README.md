@@ -2,16 +2,27 @@
 This is just a quick CFML/Coldbox 4 implementation of Twig like Java Template engine Pebble
 
 See for documentation http://www.mitchellbosecke.com/pebble/home
+
 See for Pebble Source Code https://github.com/mbosecke/pebble
 
 ## How to use
 ### Requirements
 - Coldbox 4
 - cbjavaloader
-- Just drop the Pebble folder in your modules
+- Just drop the Pebble folder in your Coldbox 4 modules folder
 
 ### How to
 - Put your Pebble templates in the Pebble/views folder, i.e. home.peb
+```html
+<html>
+	<head>
+		<title>{{ websiteTitle }}</title>
+	</head>
+	<body>
+		{{ content }}
+	</body>
+</html>
+```
 
 - Your handler should look like
 ```js
