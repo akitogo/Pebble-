@@ -9,10 +9,11 @@ See for Pebble Source Code https://github.com/mbosecke/pebble
 - Coldbox 4
 - cbjavaloader
 - Just drop the Pebble folder in your modules
+
 ### How to
 - Put your Pebble templates in the Pebble/views folder, i.e. home.peb
 
-- Your handle should look like
+- Your handler should look like
 ```js
 component{
     property name="Pebble" inject="Pebble@templateEngine";
